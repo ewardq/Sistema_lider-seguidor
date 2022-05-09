@@ -1,0 +1,183 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 0 ]
+"7 C:\Users\emartinezp1403\Documents\Tésis\Programas\Leader/i2c.h
+[v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
+"21
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+"25
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"35
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+"40
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+"24 C:\Users\emartinezp1403\Documents\Tésis\Programas\Leader/motores.h
+[v _vehiculo vehiculo `(v  1 e 1 0 ]
+"62
+[v _direccional direccional `(v  1 e 1 0 ]
+"106
+[v _posicionar_servo posicionar_servo `(v  1 e 1 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"35 C:\Users\emartinezp1403\Documents\Tésis\Programas\Leader\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S33 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"184 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f886.h
+[u S42 . 1 `S33 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES42  1 e 1 @5 ]
+[s S119 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"246
+[u S128 . 1 `S119 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES128  1 e 1 @6 ]
+[s S54 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"308
+[u S63 . 1 `S54 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES63  1 e 1 @7 ]
+"579
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"586
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"593
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
+"765
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"772
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S76 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"792
+[s S82 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S87 . 1 `S76 1 . 1 0 `S82 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES87  1 e 1 @20 ]
+"1338
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1400
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1462
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1822
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1891
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2020
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+"3230
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3392
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"3395
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"3863
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"3905
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"3908
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"3986
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"4013
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"4037
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"4163
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"4244
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4247
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"35 C:\Users\emartinezp1403\Documents\Tésis\Programas\Leader\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"56
+[v main@x2 x2 `ui  1 a 2 13 ]
+"55
+[v main@x1 x1 `ui  1 a 2 11 ]
+"84
+} 0
+"40 C:\Users\emartinezp1403\Documents\Tésis\Programas\Leader/i2c.h
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@d d `ui  1 p 2 0 ]
+"43
+} 0
+"35
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"38
+} 0
+"25
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"28
+} 0
+"21
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"23
+} 0
+"7
+[v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
+{
+[v I2C_Master_Init@c c `DCul  1 p 4 0 ]
+"19
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
