@@ -29,6 +29,7 @@
 #include "ultrasonic.h"
 #include "motores.h"
 #include "i2c.h"
+#include "UART.h"
 
 //Puesto que se van a utilizar con interrupciones, necesitamos que sean variables globales
 uint16_t Encoder1 = 0;      // Contador para Encoder derecho
@@ -59,6 +60,35 @@ void main(void) {
     // probar_motores_mov();
     probar_servomotor();
 
+    Initialize_UART();
+    
+   UART_send_string("Bluetooth Inicializado y listo!");
+   broadcast_BT();
+
+   UART_send_string("Press 1 to turn ON LED");
+   broadcast_BT();
+
+   UART_send_string("Press 0 to turn OFF LED");
+   broadcast_BT();
+   int get_value;
+    while(1){
+        get_value = BT_get_char();
+            //If we receive a '0'//
+
+        if (get_value=='0'){
+             RB3=0; 
+             UART_send_string("LED turned OFF");
+             broadcast_BT();
+          }
+    //If we receive a '1'//   
+        if (get_value=='1'){
+             RB3=1;
+             UART_send_string("LED turned ON");
+             broadcast_BT();
+          }    
+    }
+    
+    /*
     while(1){
         vehiculo(ADELANTE);
         if (distancia_menor_a_cm(10) == true){
@@ -98,7 +128,7 @@ void main(void) {
             vehiculo(ADELANTE);
         }
     }
-    
+    */
     /*
     unsigned x1 = 0xff;
     unsigned x2 = 0x00;
