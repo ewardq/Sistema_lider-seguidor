@@ -2,48 +2,33 @@
 #ifndef ENCODER_H
 #define	ENCODER_H
 
-#include <xc.h> // include processor files - each processor file is guarded.  
-
-// TODO Insert appropriate #include <>
-
-// TODO Insert C++ class definitions if appropriate
-
-// TODO Insert declarations
-
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
-
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-
-#ifdef	__cplusplus
+#include <xc.h>  
+    bool E1; 
+    bool E1_old;               //Esta variable se usa para no incrementar dos veces con el mismo pulso
+    bool E2; 
+    bool E2_old;
+    
+   uint16_t Encoder1 = 0;      // Contador para Encoder derecho
+   uint16_t Encoder2 = 0;      // Contador para Encoder derecho
+    
+void bucle_encender_LED_cada_vuelta(){    // NO SE PUEDE DETENER <<<<<
+    vehiculo(ADELANTE);
+    while(1){
+        E1 = PORTBbits.RB0;
+        if ((E1_old != E1) & (E1 == 1)){
+            Encoder1++;}
+        E1_old = E1;
+        
+        if (Encoder1 == 2100){        // Encender el LED cada vuelta y esperar un poco antes de apagarlo
+            PORTBbits.RB7 = 1;
+            vehiculo(DETENER);
+            __delay_ms(500);
+            Encoder1 = 0;
+            vehiculo(ADELANTE);
+            PORTBbits.RB7 = 0;
+        }
+    }
 }
-#endif /* __cplusplus */
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

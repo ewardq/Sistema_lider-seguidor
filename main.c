@@ -38,20 +38,37 @@ void main(void) {
     TRISA = 0b00000100; 
     TRISB = 0b00000011;
     ANSEL = 0x00;
+    ANSELH = 0x00;
     TRISC = 0b00011000;
     
     T1CON = 0x10;               // Activar Timer1
-    PORTBbits.RB7 = 0;          // Apagar LED 
-    
-    uint16_t Encoder1 = 0;      // Contador para Encoder derecho
-    uint16_t Encoder2 = 0;      // Contador para Encoder derecho
+   
         
-   // direccional(APAGAR);
+    // direccional(APAGAR);
    // vehiculo(DETENER);
     
-  //  probar_motores_mov();
+    // probar_motores_mov();
    // probar_servomotor();
     
+    
+    vehiculo(DETENER);
+    PORTBbits.RB7 = 0;          // Apagar LED 
+    
+    for(unsigned i = 0; i < 5; i++){ //Probar LED
+        __delay_ms(500);
+        PORTB ^= MASK(7);              //Cambia el estado del bit 7 del puerto B, el LED
+    }
+    __delay_ms(700);
+     PORTBbits.RB7 = 0;
+     
+     
+    bucle_encender_LED_cada_vuelta();
+    
+
+           
+    
+    
+    /*
     unsigned x1 = 0xff;
     unsigned x2 = 0x00;
     
@@ -69,7 +86,7 @@ void main(void) {
         I2C_Master_Stop();
         __delay_ms(500);
     }
-    
+    */
     /*
     unsigned aux = get_distancia_ultrasonico();
         if ((aux < 10) & (aux != 0)){
