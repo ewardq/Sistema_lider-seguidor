@@ -53,10 +53,10 @@ void Initialize_UART(){
 }
 
 //**Function to send one byte of date to UART**//
-void UART_send_char(char bt)  
-{
-    while(!TXIF);  // hold the program till TX buffer is free
-    TXREG = bt; //Load the transmitter buffer with the received value
+void UART_send_char(char byte){
+    TXREG = byte;
+    while(!TXIF);  
+    while(!TRMT);
 }
 
 void UART_send_string(char* string){

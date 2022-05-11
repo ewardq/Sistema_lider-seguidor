@@ -56,9 +56,9 @@ void main(void) {
     direccional(APAGAR);
     PORTBbits.RB7 = 0;          // Apagar LED     
     
-    probar_LED();
+    //probar_LED();
     // probar_motores_mov();
-    probar_servomotor();
+    //probar_servomotor();
 
     Initialize_UART();
     
@@ -76,13 +76,13 @@ void main(void) {
             //If we receive a '0'//
 
         if (get_value=='0'){
-             RB3=0; 
+             PORTBbits.RB7 = 0; 
              UART_send_string("LED turned OFF");
              broadcast_BT();
           }
     //If we receive a '1'//   
         if (get_value=='1'){
-             RB3=1;
+             PORTBbits.RB7 = 1;
              UART_send_string("LED turned ON");
              broadcast_BT();
           }    
