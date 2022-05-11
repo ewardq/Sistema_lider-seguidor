@@ -29,44 +29,75 @@
 #include "ultrasonic.h"
 #include "motores.h"
 #include "i2c.h"
+
+//Puesto que se van a utilizar con interrupciones, necesitamos que sean variables globales
+uint16_t Encoder1 = 0;      // Contador para Encoder derecho
+uint16_t Encoder2 = 0;      // Contador para Encoder derecho
 #include "encoder.h"
 
+void probar_LED();
+bool distancia_menor_a_cm();
 
 void main(void) {
     //Configurando puertos
-    
     TRISA = 0b00000100; 
     TRISB = 0b00000011;
     ANSEL = 0x00;
     ANSELH = 0x00;
     TRISC = 0b00011000;
     
-    T1CON = 0x10;               // Activar Timer1
+    T1CON = 0x10;               // Activar Timer1, necesario para el sensor ultrasonico
    
-        
-    // direccional(APAGAR);
-   // vehiculo(DETENER);
-    
-    // probar_motores_mov();
-   // probar_servomotor();
-    
+    const unsigned dist_para_vuelta = 5;  //Distancia necesaria para dar la vuelta en cm
+    unsigned dist;
     
     vehiculo(DETENER);
-    PORTBbits.RB7 = 0;          // Apagar LED 
+    direccional(APAGAR);
+    PORTBbits.RB7 = 0;          // Apagar LED     
     
-    for(unsigned i = 0; i < 5; i++){ //Probar LED
-        __delay_ms(500);
-        PORTB ^= MASK(7);              //Cambia el estado del bit 7 del puerto B, el LED
-    }
-    __delay_ms(700);
-     PORTBbits.RB7 = 0;
-     
-     
-    bucle_encender_LED_cada_vuelta();
-    
+    probar_LED();
+    // probar_motores_mov();
+    probar_servomotor();
 
-           
-    
+    while(1){
+        vehiculo(ADELANTE);
+        if (distancia_menor_a_cm(10) == true){
+            vehiculo(DETENER);
+            
+            posicionar_servo(0);
+            dist = get_distancia_ultrasonico();
+            if (dist >= dist_para_vuelta){
+                direccional(IZQUIERDA);
+                __delay_ms(300);
+                direccional(APAGAR);
+                vehiculo(ATRAS);
+                __delay_ms(2000);
+                direccional(DERECHA);
+                __delay_ms(300);
+                direccional(APAGAR);
+                vehiculo(DERECHA);
+                __delay_ms(1000);
+            }
+            
+            posicionar_servo(180);
+            dist = get_distancia_ultrasonico();
+            if (dist >= dist_para_vuelta){
+                direccional(DERECHA);
+                __delay_ms(300);
+                direccional(APAGAR);
+                vehiculo(ATRAS);
+                __delay_ms(2000);
+                direccional(IZQUIERDA);
+                __delay_ms(300);
+                direccional(APAGAR);
+                vehiculo(IZQUIERDA);
+                __delay_ms(1000);
+            }
+            
+            posicionar_servo(90);
+            vehiculo(ADELANTE);
+        }
+    }
     
     /*
     unsigned x1 = 0xff;
@@ -98,4 +129,26 @@ void main(void) {
         }
     */
     return;
+}
+
+
+void probar_LED(){
+    for(unsigned i = 0; i < 5; i++){ //Probar LED
+        __delay_ms(500);
+        PORTB ^= MASK(7);              //Cambia el estado del bit 7 del puerto B, el LED
+    }
+    __delay_ms(700);
+     PORTBbits.RB7 = 0;
+}
+
+bool distancia_menor_a_cm(unsigned limite){
+    unsigned aux = get_distancia_ultrasonico();
+    if ((aux < limite) & (aux != 0)){
+         PORTBbits.RB7 = 1;
+        return true;
+        }
+    else{
+        PORTBbits.RB7 = 0;
+        return false;
+        }
 }

@@ -133,7 +133,6 @@ void posicionar_servo(unsigned degrees){
 //  >>>>>>>>>>>>>>>>>>>> Función de prueba <<<<<<<<<<<<<<<<<<<<<<<<<< 
 //                     <<   Servomotor   >>
 void probar_servomotor(){
-    __delay_ms(1000);
      posicionar_servo(_0);
      
      __delay_ms(1000);

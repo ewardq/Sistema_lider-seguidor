@@ -8,9 +8,6 @@
     bool E2; 
     bool E2_old;
     
-   uint16_t Encoder1 = 0;      // Contador para Encoder derecho
-   uint16_t Encoder2 = 0;      // Contador para Encoder derecho
-    
 void bucle_encender_LED_cada_vuelta(){    // NO SE PUEDE DETENER <<<<<
     vehiculo(ADELANTE);
     while(1){
@@ -28,6 +25,21 @@ void bucle_encender_LED_cada_vuelta(){    // NO SE PUEDE DETENER <<<<<
             PORTBbits.RB7 = 0;
         }
     }
+}
+
+void incrementa_encoders(){
+    E1 = PORTBbits.RB0;
+    E2 = PORTBbits.RB1;
+    
+    //Rueda izquierda
+    if ((E1_old != E1) & (E1 == 1)){
+        Encoder1++;}
+    E1_old = E1;
+    
+    //Rueda derecha
+    if ((E2_old != E2) & (E2 == 1)){
+        Encoder1++;}
+    E2_old = E2;
 }
 
 #endif	/* XC_HEADER_TEMPLATE_H */
