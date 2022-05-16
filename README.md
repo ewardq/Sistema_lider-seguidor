@@ -1,4 +1,4 @@
-# Repositorio definitivo para el proyecto. (Tanto el código como la documentación serán actualizados al término del trabajo escrito)
+# Repositorio definitivo para el proyecto. (Trabajo en progreso!)
 
 ## Objetivo 
 Desarrollar un sistema móvil de seguimiento líder-seguidor sin contacto físico entre ellos. 
