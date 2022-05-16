@@ -1,12 +1,13 @@
 /*   ========================================================================
  *
- *     Esta librería controla 3 motores con 3 puentes H y el servomotor.
- *   También contiene funciones para asegurarse de que el hardware funcione
+ *     Esta librerÃ­a controla 3 motores con 3 puentes H y el servomotor.
+ *   TambiÃ©n contiene funciones para asegurarse de que el hardware funcione
  *                           
      =======================================================================*/
 
 #ifndef MOTORES_H
 #define	MOTORES_H
+float wheelAngle;            // Angulo de direccional
 
 #include <xc.h>  
 
@@ -63,18 +64,21 @@ void direccional(unsigned op){
     if (op & DERECHA){
         PORTAbits.RA0 = 1;
         PORTAbits.RA1 = 0;
+         wheelAngle = 70;
     }
     if (op & IZQUIERDA){
         PORTAbits.RA0 = 0;
         PORTAbits.RA1 = 1;
+         wheelAngle = 110;
     }
     if (op & APAGAR){
         PORTAbits.RA0 = 0;
         PORTAbits.RA1 = 0; 
+         wheelAngle = 90;
     }
 }
 
-//  >>>>>>>>>>>>>>>>>>>> Función de prueba <<<<<<<<<<<<<<<<<<<<<<<<<< 
+//  >>>>>>>>>>>>>>>>>>>> FunciÃ³n de prueba <<<<<<<<<<<<<<<<<<<<<<<<<< 
 //                      <<    Motores    >>
 void probar_motores_mov(){
     //Probar los modos de movimiento
@@ -96,7 +100,7 @@ void probar_motores_mov(){
 // ============================================================================
 
 // ____________________________________________________________________________
-// =======  Generación de PWM para servo (50Hz / 5-10% Duty Cycle)  ===========
+// =======  GeneraciÃ³n de PWM para servo (50Hz / 5-10% Duty Cycle)  ===========
 // ============================================================================
 
 const unsigned _0 = 0;
@@ -124,13 +128,13 @@ void posicionar_servo(unsigned degrees){
              break;
             case 180:
              break;      
-            default:   __delay_us(500);    //Posición neutral (90°)
+            default:   __delay_us(500);    //PosiciÃ³n neutral (90Â°)
         }
         __delay_us(18000);
      }
 }
 
-//  >>>>>>>>>>>>>>>>>>>> Función de prueba <<<<<<<<<<<<<<<<<<<<<<<<<< 
+//  >>>>>>>>>>>>>>>>>>>> FunciÃ³n de prueba <<<<<<<<<<<<<<<<<<<<<<<<<< 
 //                     <<   Servomotor   >>
 void probar_servomotor(){
     __delay_ms(1000);
