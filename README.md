@@ -52,16 +52,21 @@ El algoritmo control-seguidor del robot constituye el sistema de control complet
 ## Prototipo móvil líder
 **Dirección Ackermann:** El principio de Ackerman enuncia que cuando un móvil gira en una curva, los ejes de todas las ruedas deben concurrir en un punto, el centro instantáneo de rotación. La mangueta de la rueda interior debe de girar un ángulo mayor que la de la rueda exterior, luego se precisa una divergencia de las ruedas delanteras cuando se toman las curvas para evitar el desgaste de las cubiertas y evitar el deslizamiento. 
 La posición [38] de un robot móvil con tracción Ackerman está dada por las coordenadas X,Y, la orientación del robot θ y el ángulo de inclinación de las ruedas ϕ como se ilustra en la figura 2.10.
+
 ![image](https://user-images.githubusercontent.com/72580785/174132786-1aa3401b-b09b-42f1-a375-6af67c70c8aa.png)
 <p align="center">
   Figura 2.10 Posición de un robot con dirección Ackerman.
 </p>
+
 Podemos representar la posición de un robot con dirección Ackerman con el vector 2.3.
-![image](https://user-images.githubusercontent.com/72580785/174132947-cb3ae711-a066-4ea0-8307-fa7de8379bbd.png)
+![image](https://user-images.githubusercontent.com/72580785/174133736-ee447cb1-1657-433e-b7a1-f70eb9fc2748.png)
 
 **Esquemático**
+
 ![image](https://user-images.githubusercontent.com/72580785/174131882-3f131966-414b-447f-859a-effa3aabf82c.png)
+
 **Prototipo usado en los experimentos**
+
 ![image](https://user-images.githubusercontent.com/72580785/174130616-a0f76456-979e-47f1-a06e-9efc6f37b621.png)
 ![image](https://user-images.githubusercontent.com/72580785/174131047-d6e350d2-e2a1-4501-94d1-3a787014e651.png)
 ![image](https://user-images.githubusercontent.com/72580785/174131621-ad513f33-c946-4fe2-9c98-d366763d9500.png)
