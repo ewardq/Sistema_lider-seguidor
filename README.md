@@ -20,16 +20,22 @@ Desarrollar un sistema móvil terrestre de seguimiento líder-seguidor sin conta
 Se realiza el diseño del robot móvil en el software Proteus, como sistema de control se cuenta con el microcontrolador PIC16F886 el cual se encarga de en ejecutar el procesamiento de la información adjunta en él. La figura 4.7 muestra el flujo de información del sistema del robot líder, el cual consta del microcontrolador como pieza central, tres sensores que envían información, los puentes H que reciben comandos y el transmisor de Bluetooth. 
 ![Diagrama de líder](https://user-images.githubusercontent.com/72580785/174125972-150ff72b-7bd1-46f5-b467-7f855e638316.png)
 <p align="center">
-  Figura 4.7 Diagrama a bloques del módulo líder
+  Figura 4.7 Diagrama a bloques del módulo líder.
 </p>
 
 ## Desarrollo del móvil seguidor
 Para este módulo móvil se cambian algunos componentes ya que este solo se guiaría del robot líder, pero necesita de una mayor cantidad de memoria respecto al microcontrolador del módulo móvil líder ya que en esta memoria se implementa el controlador PI y es indispensable obtener una rápida respuesta. La figura 4.15 ilustra que el módulo seguidor está constituido por un sensor que envía la aceleración que se convierte posteriormente en la orientación actual para la ley de control dentro del microcontrolador, el módulo bluetooth que envía la orientación deseada, y los motores que actúan como elementos finales de control.
 ![Diagrama de seguidor](https://user-images.githubusercontent.com/72580785/174129513-e9e78fa5-fbd8-4a03-a03d-53f2d41227e4.png)
+<p align="center">
+  Figura 4.15 Diagrama a bloques del móvil seguidor.
+</p>
 
 ### Algoritmo seguidor
 Se diseña el algoritmo del módulo seguidor de tal forma que la variable controlada sea la orientación del robot diferencial tal como se ilustra en la figura 4.33. En donde el robot seguidor recibe a través del módulo Bluetooth la orientación deseada, su posición actual es medida con el acelerómetro/giroscópico MPU6050 para luego enviar el comando de control hacia los motores, o bien, los actuadores.
 ![Algoritmo-seguidor](https://user-images.githubusercontent.com/72580785/174127072-ced03c71-d4f8-4e68-b0a6-a4794c3fb9c8.png)
+<p align="center">
+  Figura 4.33 Esquema del algoritmo del robot seguidor.
+</p>
 
 A continuación, se desarrollan los algoritmos del esquema anterior por partes.
 La función que entrega la señal hacia los actuadores se llama “to_actuators(  )” y se construye con ayuda de la ecuación (2.4) como se muestra en el algoritmo 1.
