@@ -63,11 +63,10 @@ Podemos representar la posición de un robot con dirección Ackerman con el vect
 
 **Esquemático**
 
-![image](https://user-images.githubusercontent.com/72580785/174131882-3f131966-414b-447f-859a-effa3aabf82c.png)
+![image](https://user-images.githubusercontent.com/72580785/174130616-a0f76456-979e-47f1-a06e-9efc6f37b621.png)
 
 **Prototipo usado en los experimentos**
 
-![image](https://user-images.githubusercontent.com/72580785/174130616-a0f76456-979e-47f1-a06e-9efc6f37b621.png)
 ![image](https://user-images.githubusercontent.com/72580785/174131047-d6e350d2-e2a1-4501-94d1-3a787014e651.png)
 ![image](https://user-images.githubusercontent.com/72580785/174131621-ad513f33-c946-4fe2-9c98-d366763d9500.png)
 
@@ -76,14 +75,20 @@ Podemos representar la posición de un robot con dirección Ackerman con el vect
 ## Protitpo móvil seguidor
 **Dirección diferencial:** La función de esta configuración es dividir por igual al par motor, transmitirlo a las ruedas al mismo tiempo que estos giren a diferentes velocidades si es necesario. Es decir, permite que la llanta de la derecha y de la izquierda giren a velocidades diferentes, según la curva que esté tomando el coche, esto significa que cuando un móvil toma una curva hacia la derecha, la rueda de este lado gira un recorrido más corto con respecto a la rueda izquierda, y lo mismo ocurre en el caso contrario.
 La posición de un robot móvil con ruedas diferencial está dada por las coordenadas X,Y y la orientación θ del robot como se ilustra en la figura 2.8.
+
 ![image](https://user-images.githubusercontent.com/72580785/174132235-c0c5f551-4ffd-42b6-a130-41aacb38ea0d.png)
 <p align="center">
   Figura 2.8 Posición de un robot diferencial.
 </p>
 
 Entonces, podemos representar la posición q de un robot diferencial como el vector 2.2
+
 ![image](https://user-images.githubusercontent.com/72580785/174132353-8cad9d7c-bd9f-413b-8146-91a17f89bce6.png)
+
 **Esquemático**
+
 ![image](https://user-images.githubusercontent.com/72580785/174130661-0bf7cb61-43a7-42ea-9f7c-06af3c7ae0f9.png)
+
 **Prototipo usado en los experimentos**
+
 ![image](https://user-images.githubusercontent.com/72580785/174131106-76d2047e-0e9c-47e3-83a6-5be64a3474a5.png)
