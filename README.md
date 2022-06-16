@@ -1,4 +1,4 @@
-# Repositorio definitivo para el proyecto.
+# Repositorio definitivo para la Tésis.
 
 ## Abstract
 The use of wheeled mobile robots has been the subject of research for several years along with the study of control algorithms suitable for activities that can become complicated for humans; one of these algorithms is the one that consists of a robot that traces a path when navigating and another that follows said path.
