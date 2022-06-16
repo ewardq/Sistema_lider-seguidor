@@ -62,7 +62,7 @@ La posición [38] de un robot móvil con tracción Ackerman está dada por las c
 
 Podemos representar la posición de un robot con dirección Ackerman con el vector 2.3.
 <p align="center">
-  <img width="150" height="200" src="https://user-images.githubusercontent.com/72580785/174133736-ee447cb1-1657-433e-b7a1-f70eb9fc2748.png">
+  <img width="70" height="100" src="https://user-images.githubusercontent.com/72580785/174133736-ee447cb1-1657-433e-b7a1-f70eb9fc2748.png">
 </p>
 
 **Esquemático**
@@ -80,14 +80,17 @@ Podemos representar la posición de un robot con dirección Ackerman con el vect
 **Dirección diferencial:** La función de esta configuración es dividir por igual al par motor, transmitirlo a las ruedas al mismo tiempo que estos giren a diferentes velocidades si es necesario. Es decir, permite que la llanta de la derecha y de la izquierda giren a velocidades diferentes, según la curva que esté tomando el coche, esto significa que cuando un móvil toma una curva hacia la derecha, la rueda de este lado gira un recorrido más corto con respecto a la rueda izquierda, y lo mismo ocurre en el caso contrario.
 La posición de un robot móvil con ruedas diferencial está dada por las coordenadas X,Y y la orientación θ del robot como se ilustra en la figura 2.8.
 
-![image](https://user-images.githubusercontent.com/72580785/174132235-c0c5f551-4ffd-42b6-a130-41aacb38ea0d.png)
+<p align="center">
+  <img width="420" height="325" src="https://user-images.githubusercontent.com/72580785/174132235-c0c5f551-4ffd-42b6-a130-41aacb38ea0d.png">
+</p>
 <p align="center">
   Figura 2.8 Posición de un robot diferencial.
 </p>
 
 Entonces, podemos representar la posición q de un robot diferencial como el vector 2.2
-
-![image](https://user-images.githubusercontent.com/72580785/174132353-8cad9d7c-bd9f-413b-8146-91a17f89bce6.png)
+<p align="center">
+  <img width="70" height="100" src="https://user-images.githubusercontent.com/72580785/174132353-8cad9d7c-bd9f-413b-8146-91a17f89bce6.png">
+</p>
 
 **Esquemático**
 
