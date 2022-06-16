@@ -37,6 +37,9 @@ La función que entrega la orientación actual para su retroalimentación se lla
 ![Algoritmo2](https://user-images.githubusercontent.com/72580785/174128167-991cbde4-5263-4f07-963d-9f8a34c6d26e.PNG)
 
 El algoritmo control-seguidor del robot constituye el sistema de control completo, en donde se compara la posición actual con la posición deseada.
-![Algoritmo3](https://user-images.githubusercontent.com/72580785/174128487-b78e293c-d175-469c-b92c-9fbe7e44a9f6.PNG)
+<p align="center">
+  ![Algoritmo3](https://user-images.githubusercontent.com/72580785/174128487-b78e293c-d175-469c-b92c-9fbe7e44a9f6.PNG)
+</p>
+
 
 
