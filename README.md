@@ -54,7 +54,7 @@ El algoritmo control-seguidor del robot constituye el sistema de control complet
 La posición [38] de un robot móvil con tracción Ackerman está dada por las coordenadas X,Y, la orientación del robot θ y el ángulo de inclinación de las ruedas ϕ como se ilustra en la figura 2.10.
 
 <p align="center">
-  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/72580785/174132786-1aa3401b-b09b-42f1-a375-6af67c70c8aa.png)">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/72580785/174132786-1aa3401b-b09b-42f1-a375-6af67c70c8aa.png">
   Figura 2.10 Posición de un robot con dirección Ackerman.
 </p>
 
