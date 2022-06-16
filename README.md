@@ -19,7 +19,9 @@ Desarrollar un sistema móvil terrestre de seguimiento líder-seguidor sin conta
 ## Desarrollo del móvil líder
 Se realiza el diseño del robot móvil en el software Proteus, como sistema de control se cuenta con el microcontrolador PIC16F886 el cual se encarga de en ejecutar el procesamiento de la información adjunta en él. La figura 4.7 muestra el flujo de información del sistema del robot líder, el cual consta del microcontrolador como pieza central, tres sensores que envían información, los puentes H que reciben comandos y el transmisor de Bluetooth. 
 ![Diagrama de líder](https://user-images.githubusercontent.com/72580785/174125972-150ff72b-7bd1-46f5-b467-7f855e638316.png)
-Figura 4.7 Diagrama a bloques del módulo líder
+<p align="center">
+  Figura 4.7 Diagrama a bloques del módulo líder
+</p>
 
 ## Desarrollo del móvil seguidor
 Para este módulo móvil se cambian algunos componentes ya que este solo se guiaría del robot líder, pero necesita de una mayor cantidad de memoria respecto al microcontrolador del módulo móvil líder ya que en esta memoria se implementa el controlador PI y es indispensable obtener una rápida respuesta. La figura 4.15 ilustra que el módulo seguidor está constituido por un sensor que envía la aceleración que se convierte posteriormente en la orientación actual para la ley de control dentro del microcontrolador, el módulo bluetooth que envía la orientación deseada, y los motores que actúan como elementos finales de control.
