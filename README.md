@@ -55,9 +55,10 @@ La posición [38] de un robot móvil con tracción Ackerman está dada por las c
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/72580785/174132786-1aa3401b-b09b-42f1-a375-6af67c70c8aa.png">
+</p>
+<p align="center">
   Figura 2.10 Posición de un robot con dirección Ackerman.
 </p>
-
 
 Podemos representar la posición de un robot con dirección Ackerman con el vector 2.3.
 ![image](https://user-images.githubusercontent.com/72580785/174133736-ee447cb1-1657-433e-b7a1-f70eb9fc2748.png)
