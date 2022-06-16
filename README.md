@@ -23,7 +23,7 @@ Figura 4.7 Diagrama a bloques del módulo líder
 
 ## Desarrollo del móvil seguidor
 Para este módulo móvil se cambian algunos componentes ya que este solo se guiaría del robot líder, pero necesita de una mayor cantidad de memoria respecto al microcontrolador del módulo móvil líder ya que en esta memoria se implementa el controlador PI y es indispensable obtener una rápida respuesta. La figura 4.15 ilustra que el módulo seguidor está constituido por un sensor que envía la aceleración que se convierte posteriormente en la orientación actual para la ley de control dentro del microcontrolador, el módulo bluetooth que envía la orientación deseada, y los motores que actúan como elementos finales de control.
-![Diagrama de seguidor](https://user-images.githubusercontent.com/72580785/174127099-f74880ab-5f5b-4cdc-87eb-f44a661903dc.png)
+![Diagrama de seguidor](https://user-images.githubusercontent.com/72580785/174129513-e9e78fa5-fbd8-4a03-a03d-53f2d41227e4.png)
 
 ### Algoritmo seguidor
 Se diseña el algoritmo del módulo seguidor de tal forma que la variable controlada sea la orientación del robot diferencial tal como se ilustra en la figura 4.33. En donde el robot seguidor recibe a través del módulo Bluetooth la orientación deseada, su posición actual es medida con el acelerómetro/giroscópico MPU6050 para luego enviar el comando de control hacia los motores, o bien, los actuadores.
