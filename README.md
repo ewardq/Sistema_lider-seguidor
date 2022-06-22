@@ -47,6 +47,8 @@ La función que entrega la orientación actual para su retroalimentación se lla
 El algoritmo control-seguidor del robot constituye el sistema de control completo, en donde se compara la posición actual con la posición deseada.
 ![Algoritmo3](https://user-images.githubusercontent.com/72580785/174128487-b78e293c-d175-469c-b92c-9fbe7e44a9f6.PNG)
 
+### Simulización usada para la sintonización inicial del PI en el seguidor.
+![image](https://user-images.githubusercontent.com/72580785/174938349-7ce4b808-48da-4a11-a6a5-7d9dfbddaec1.png)
 
 
 ## Prototipo móvil líder
